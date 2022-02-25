@@ -1,0 +1,183 @@
+*{box-sizing: border-box; font-family: 'Source Sans Pro';}
+
+body{
+    margin: 0;
+    color: #0000008c;
+}
+
+
+
+/* INICIO DAS CONFIGURACOES DO HEADER DA PAGINA */
+header{
+    background-color: #00CAD1;
+    position: sticky;
+    top:0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+    height: 50px;
+}
+
+.menu-links a{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-links a:hover{
+    color: black;
+}
+/* FIM DA CONFIGURACAO DO HEADER DA PAGINA */
+
+/* CONTAINER PADRAO PARA SECOES DO SITE */
+.container-block{
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* CONFIGS DO INICIO DA PAGINA PRINCIPAL */ 
+.initial-page{
+    height: 70vh;
+    background-image: url(../assets/recepcao.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.initial-text-box{
+    width: 1024px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+}
+
+.img-plus-content{
+    display: flex;
+}
+
+/*CONFIGS DO ID=ESPECIALIDADES */
+/* ######################################## */
+
+/* ESTE É O CONTAINER QUE RECEBE OS SUB-CONTAINERS DAS FIGURAS */
+.container-imgs{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* CONTAINER COM CADA FIGURA E SUA DESCRICAO*/
+.container-fig{
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px rgba(0,0,0, 0.5);
+    margin-bottom: 50px;
+}
+
+
+.container-fig figcaption{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+/* CONFIGURANDO A IMAGEM DA FIGURA */
+.container-fig img{
+    width: 100%;
+}
+
+.container-fig:hover{
+    background-color: rgba(0,0,0, 0.2);
+}
+
+.button-verHorarios a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color:#00CAD1;
+    padding: 10px;
+}
+
+/* CONFIGURACAO DA PAGINA DE CONTATO */
+.container-text{
+    text-align: center;
+}
+
+.gmap{
+    width: 1024px;
+}
+
+/* CONFIGS DO FOOTER DA PAGINA */
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0C6E71;
+    margin-top: 50px;
+    color: #fff;
+    justify-content:space-around;
+}
+
+.text-in-footer{
+    text-align:center;
+}
+
+/* APLICANDO RESPONSIVIDADE COM MEDIA QUERY AO SITE */
+
+@media (max-width:425px){
+    /* CONFIGS DO HEADER*/
+    .header{
+        flex-direction: column;
+    }
+    .menu-links{
+        border-top: 1px solid #0C6E71;
+        padding:5px 0px;
+    }
+    /* DIMINUINDO TAMANHO DO TEXTO DA PAGINA DE BOAS-VINDAS */
+    .initial-text-box{
+        font-size: 12px;
+    }
+    .img-plus-content img{
+        display: none;
+    }
+    .container-imgs{
+        flex-wrap: wrap;
+    }
+    .gmap{
+        width: 100vw;
+    }
+}
+
+@media (max-width:768px) and (min-width:425px){
+    .initial-text-box{
+        font-size: 16px;
+    }
+    .img-plus-content img{
+        display: none;
+    }
+    .container-imgs{
+        flex-wrap: wrap;
+    }
+    .container-fig{
+        width: calc(50% - 80px);
+    }
+
+}

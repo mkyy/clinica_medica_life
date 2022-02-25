@@ -1,0 +1,81 @@
+
+/* ESTILIZANDO O NAV DE ESPECIALISTAS */
+.nav-especialidades{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-especialidades a{
+    text-decoration: none;
+    margin: 10px;
+    border-bottom: 2px solid #00CAD1;
+    color: #545454;
+    font-weight: 600;
+}
+.nav-especialidades a:hover{
+    color: black;
+}
+
+/* ESTILOS DOS CONTAINERS */
+.container-text{
+    width: calc(100% /2);
+}
+
+.img-table{
+    display: flex;
+    max-width: 1024px;
+    height: 210px;
+}
+.img-table img{
+    width: 30%;
+}
+.img-table table{
+    text-align: left;
+    width:60%;
+    border-collapse: collapse;
+}
+
+.img-table table thead{
+    background-color: #00cad1;
+    color: #fff;
+}
+.img-table table tbody tr:nth-child(odd){
+    background-color: #CDCDCD;
+}
+
+@media (max-width:425px){
+    .container-block{
+        margin: 0;
+        max-width: 100%;
+    }
+    .container-block .container-text{
+        width: 100%;
+    }
+    .img-table{
+        width: 100%;
+    }
+    .img-table table{
+        width: 100%;
+    }
+    .img-table img{
+        display: none;
+    }
+}
+
+@media (max-width:768px) and (min-width:425px){
+    .container-block{
+        margin: 0;
+        max-width: 100%;
+    }
+    .img-table{
+        width: 100%;   
+    }
+    .img-table table{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .img-table img{
+        display: none;
+    }
+}
