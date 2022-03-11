@@ -56,7 +56,7 @@ header{
 /* CONFIGS DO INICIO DA PAGINA PRINCIPAL */ 
 .initial-page{
     height: 70vh;
-    background-image: url("../assets/recepcao.png");
+    background-image: url("./assets/recepcao.png");
     background-size: cover;
     background-position: center;
     display: flex;
